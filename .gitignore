@@ -1,0 +1,40 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+# macOS
+.DS_Store
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Database
+*.sqlite3
+
+# Media files (uploads)
+media/
+
+# Static files (collectstatic)
+static/
+
+# Secret key
+secret_key.txt
+
+# Compiled translations
+locale/
