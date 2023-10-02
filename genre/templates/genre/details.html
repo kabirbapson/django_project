@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piece</title>
+</head>
+
+{% block content %}
+<body>
+    <p>hhdfhh</p>
+    <p> {{bello}} </p>
+    {% if pItem %} 
+        {% for obj in pItem %}
+            <div align="center">
+                <img src="{{ obj.p_cover }}" height="200" width="200" >
+                <h2>{{ obj.p_title }} - {{ obj.p_artist }}</h2>
+                <h3>{{ obj.p_type }}</h3>
+                <h3>{{ obj.p_year }}</h3>
+                <br>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No items available.</p>
+    {% endif %}
+</body>
+{% endblock %}
+</html>

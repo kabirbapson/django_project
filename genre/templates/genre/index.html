@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+</head>
+
+{% block content %}
+<body>
+    <p>hhdfhh</p>
+    <p> {{bello}} </p>
+    {% if all_collection %} 
+        {% for obj in all_collection %}
+            <div align="center">
+                <img src="{{ obj.col_cover }}" height="200" width="200" >
+                <h2><a href="/genre/{{ obj.id }}">{{ obj.col_name }}</a></h2>
+                <h3>{{ obj.col_description }}</h3>
+                <br>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No items available.</p>
+    {% endif %}
+</body>
+{% endblock %}
+</html>
