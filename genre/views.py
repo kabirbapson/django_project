@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Collections, Piece
 from django.views import generic
+from django.views.generic import View
+from .forms import UserForm
 # Create your views here.
 
 class index(generic.ListView):
@@ -16,6 +18,21 @@ class details(generic.DetailView):
     model = Collections
     template_name = 'genre/details.html'
 
+class UserFormView(View):
+    form_class = UserForm
+    template_name = 'genre/form.html'
+
+    def get(self, request):
+        form = self.form_class(None)
+        return render(request, self.template_name, {'form': form})
+    
+    def post(self, request):
+        form = self.form_class(request.POST)
+
+        if form.is_valid():
+            
+
+            
 # def index(request):
 #     all_collection = Collections.objects.all()
 #     bello = 'Halima Bello'
