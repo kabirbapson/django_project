@@ -18,18 +18,23 @@ class details(generic.DetailView):
     model = Collections
     template_name = 'genre/details.html'
 
-class UserFormView(View):
-    form_class = UserForm
-    template_name = 'genre/form.html'
+# class UserFormView(View):
+#     form_class = UserForm
+#     template_name = 'genre/form.html'
 
-    def get(self, request):
-        form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
+#     def get(self, request):
+#         form = self.form_class(None)
+#         return render(request, self.template_name, {'form': form})
     
-    def post(self, request):
-        form = self.form_class(request.POST)
+#     def post(self, request):
+#         form = self.form_class(request.POST)
 
-        if form.is_valid():
+#         if form.is_valid():
+#             user = form.save()
+#             username = form.cleaned_data('username')
+#             password = form.cleaned_data('password')
+
+
             
 
             
@@ -51,3 +56,4 @@ class UserFormView(View):
 #     }
 #     print('my doe ',pItem)
 #     return render(request, 'genre/details.html', context)
+#
